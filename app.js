@@ -12,7 +12,7 @@
     if (scrolled === headerScrolled) return;
     headerScrolled = scrolled;
     header.classList.toggle('is-scrolled', scrolled);
-    logo.src = scrolled ? 'assets/images/hd_logo_on.png' : 'assets/images/hd_logo.png';
+    logo.src = 'assets/images/hd_logo_on.png';
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
