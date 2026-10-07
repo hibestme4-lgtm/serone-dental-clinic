@@ -4,3 +4,7 @@ dsc-contact-sheet.jpg
 runtime-dom*.txt
 types-runtime-check*.txt
 output/
+
+# 쓰지 않는 지도 시안
+assets/images/contact-map-generated-v3.png
+assets/images/contact-map-simple-v4.png
