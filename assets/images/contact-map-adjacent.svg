@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="620" viewBox="0 0 750 620" role="img" aria-labelledby="title desc">
+  <title id="title">새론이치과와 바로 옆 대호주차장 안내도</title>
+  <desc id="desc">새론이치과 건물과 바로 옆에 붙어 있는 대호주차장을 표시한 안내도</desc>
+  <defs>
+    <linearGradient id="mapBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8fbfc"/><stop offset="1" stop-color="#edf6f9"/></linearGradient>
+    <linearGradient id="clinicCard" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#f4fbfe"/></linearGradient>
+    <filter id="mapShadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#103e52" flood-opacity=".16"/></filter>
+    <filter id="pinShadow" x="-60%" y="-50%" width="220%" height="230%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#072f49" flood-opacity=".2"/></filter>
+    <clipPath id="buildingClip"><rect x="54" y="46" width="382" height="244" rx="25"/></clipPath>
+    <style>text{font-family:Pretendard,"Noto Sans KR","Malgun Gothic",sans-serif}</style>
+  </defs>
+
+  <rect width="750" height="620" fill="url(#mapBg)"/>
+  <circle cx="696" cy="70" r="170" fill="#dff4fc" opacity=".48"/>
+  <circle cx="38" cy="590" r="150" fill="#e3f5fb" opacity=".52"/>
+
+  <rect x="32" y="34" width="686" height="418" rx="30" fill="#e6ecef"/>
+  <image href="contact-clinic-building-v2.png" x="54" y="46" width="382" height="244" preserveAspectRatio="xMidYMid slice" clip-path="url(#buildingClip)"/>
+
+  <g transform="translate(110 170)" filter="url(#pinShadow)">
+    <path d="M0 0c-25 0-45 20-45 45 0 34 45 77 45 77s45-43 45-77C45 20 25 0 0 0z" fill="#072f49"/>
+    <circle cy="43" r="20" fill="#fff"/>
+  </g>
+
+  <g transform="translate(71 296)" filter="url(#mapShadow)">
+    <rect width="355" height="91" rx="32" fill="url(#clinicCard)" stroke="#0099db" stroke-width="4"/>
+    <g transform="translate(27 23)" fill="none" stroke="#0099db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 3c6-5 13-3 17 2 4-5 11-7 17-2 8 7 2 27-4 37-2 4-6 3-7-2l-3-12c-1-5-6-5-7 0l-3 12c-1 5-5 6-7 2C4 30-2 10 7 3z"/>
+      <path d="M18 7c3 3 8 3 12 0"/>
+    </g>
+    <text x="84" y="56" fill="#0b3348" font-size="27" font-weight="800">새론이치과 <tspan fill="#0099db">3F</tspan></text>
+    <text x="84" y="77" fill="#78909a" font-size="13" font-weight="600">내외중앙로 68 · 3층</text>
+  </g>
+
+  <g transform="translate(439 257)" filter="url(#mapShadow)">
+    <rect width="261" height="130" rx="34" fill="#e6f7fd" stroke="#71d0f3" stroke-width="3"/>
+    <g transform="translate(23 25)"><rect width="54" height="54" rx="18" fill="#0099db"/><text x="27" y="39" fill="#fff" font-size="35" font-weight="900" text-anchor="middle">P</text></g>
+    <text x="91" y="55" fill="#07567c" font-size="25" font-weight="800">대호주차장</text>
+    <text x="91" y="82" fill="#43839e" font-size="16" font-weight="700">치과 바로 옆</text>
+    <text x="23" y="108" fill="#6b8b99" font-size="13" font-weight="600">도로를 건너지 않고 바로 이동</text>
+  </g>
+
+  <g transform="translate(411 404)">
+    <path d="M-30 0h60" stroke="#0099db" stroke-width="5" stroke-linecap="round"/>
+    <path d="M-30 0l10-7v14zm60 0l-10-7v14z" fill="#0099db"/>
+    <rect x="-47" y="-42" width="94" height="29" rx="15" fill="#fff" stroke="#b8dfed" stroke-width="2"/>
+    <text y="-22" fill="#008bc7" font-size="14" font-weight="800" text-anchor="middle">바로 옆</text>
+  </g>
+
+  <rect x="22" y="452" width="706" height="144" rx="43" fill="#fff"/>
+  <path d="M48 524h654" stroke="#d0dde2" stroke-width="5" stroke-linecap="round"/>
+  <path d="M163 483h94M307 483h94M451 483h94" stroke="#e4ecef" stroke-width="4" stroke-linecap="round"/>
+  <text x="666" y="506" fill="#9aabb2" font-size="14" font-weight="600" text-anchor="end">내외중앙로</text>
+</svg>

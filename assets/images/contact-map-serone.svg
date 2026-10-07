@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="780" viewBox="0 0 750 780" role="img" aria-labelledby="title desc">
+  <title id="title">새론이치과 오시는 길 안내도</title>
+  <desc id="desc">경상남도 김해시 내외중앙로 68, 우리은행 옆 새론이치과와 대호주차장의 위치를 표시한 지도</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9fcfd"/>
+      <stop offset="1" stop-color="#edf7fb"/>
+    </linearGradient>
+    <linearGradient id="route" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#54cdf7"/>
+      <stop offset="1" stop-color="#0099db"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="10" stdDeviation="11" flood-color="#073a54" flood-opacity=".14"/>
+    </filter>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#07506f" flood-opacity=".12"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M1 1l8 4-8 4z" fill="#0099db"/>
+    </marker>
+    <style>
+      text{font-family:Pretendard,"Noto Sans KR","Malgun Gothic",sans-serif}
+      .landmark{fill:#52636c;font-size:18px;font-weight:600;text-anchor:middle}
+      .minor{fill:#8ca0aa;font-size:14px;font-weight:600;text-anchor:middle}
+      .dot{fill:#7b8d96}
+    </style>
+  </defs>
+
+  <rect width="750" height="780" fill="url(#bg)"/>
+  <circle cx="680" cy="80" r="180" fill="#dff4fc" opacity=".46"/>
+  <circle cx="50" cy="740" r="180" fill="#e9f8fd" opacity=".66"/>
+
+  <g opacity=".98">
+    <path d="M36 120h318v178H36z" rx="26" fill="#e7eef1"/>
+    <path d="M443 120h270v178H443z" rx="26" fill="#e7eef1"/>
+    <path d="M36 402h318v112H36z" rx="22" fill="#e7eef1"/>
+    <path d="M443 402h270v112H443z" rx="22" fill="#e7eef1"/>
+    <path d="M36 612h318v128H36z" rx="24" fill="#e7eef1"/>
+    <path d="M443 612h270v128H443z" rx="24" fill="#e7eef1"/>
+  </g>
+
+  <rect x="354" y="76" width="89" height="670" rx="32" fill="#fff"/>
+  <rect x="25" y="298" width="700" height="104" rx="35" fill="#fff"/>
+  <rect x="25" y="514" width="700" height="98" rx="32" fill="#fff"/>
+  <path d="M398 92v638M43 350h664M43 563h664" stroke="#d2dde2" stroke-width="4" stroke-linecap="round"/>
+
+  <g transform="translate(110 137)" filter="url(#shadow)">
+    <rect width="267" height="98" rx="24" fill="#fff" stroke="#8eddf9" stroke-width="3"/>
+    <text x="22" y="29" fill="#5794aa" font-size="13" font-weight="800" letter-spacing="1.5">SERONE DENTAL CLINIC</text>
+    <text x="22" y="62" fill="#0b3348" font-size="25" font-weight="800">새론이치과 <tspan fill="#0099db">3F</tspan></text>
+    <text x="22" y="84" fill="#78909b" font-size="13" font-weight="600">내외중앙로 68 · 우리은행 옆</text>
+  </g>
+
+  <g transform="translate(333 230)" filter="url(#softShadow)">
+    <path d="M0 0c-27 0-49 21-49 48 0 36 49 83 49 83s49-47 49-83C49 21 27 0 0 0z" fill="#0099db"/>
+    <circle cy="47" r="24" fill="#fff"/>
+    <path d="M-11 38c3-7 11-9 17-4 6-5 14-3 17 4 4 9-3 27-8 33-2 3-5 2-6-2L6 58c-1-4-5-4-6 0l-3 11c-1 4-4 5-6 2-5-6-12-24-8-33z" transform="translate(-3 -1) scale(.7)" fill="none" stroke="#0099db" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <path d="M333 366v71h103" fill="none" stroke="url(#route)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 15" marker-end="url(#arrow)"/>
+  <text x="382" y="423" fill="#008cc8" font-size="13" font-weight="800" text-anchor="middle">도보 이동</text>
+
+  <g transform="translate(474 437)" filter="url(#shadow)">
+    <circle r="45" fill="#fff" stroke="#0099db" stroke-width="4"/>
+    <circle r="31" fill="#07567c"/>
+    <text y="12" fill="#fff" font-size="35" font-weight="900" text-anchor="middle">P</text>
+  </g>
+  <g transform="translate(521 415)" filter="url(#softShadow)">
+    <rect width="178" height="55" rx="28" fill="#0099db"/>
+    <text x="89" y="36" fill="#fff" font-size="21" font-weight="800" text-anchor="middle">대호주차장</text>
+  </g>
+
+  <g>
+    <circle class="dot" cx="170" cy="350" r="5"/><text class="landmark" x="170" y="381">홍콩반점</text>
+    <circle class="dot" cx="525" cy="350" r="5"/><text class="landmark" x="525" y="381">우리은행</text>
+    <circle class="dot" cx="652" cy="350" r="5"/><text class="landmark" x="652" y="381">KB국민은행</text>
+
+    <circle class="dot" cx="145" cy="526" r="5"/><text class="minor" x="145" y="553">김종구식맛치킨</text>
+    <circle class="dot" cx="316" cy="526" r="5"/><text class="minor" x="316" y="550">에스제이</text><text class="minor" x="316" y="570">테라스파크</text>
+    <circle class="dot" cx="621" cy="526" r="5"/><text class="landmark" x="621" y="557">하나은행</text>
+  </g>
+
+  <g transform="translate(82 640)">
+    <path d="M0 49h148v84H0z" rx="18" fill="#dcefc9"/>
+    <circle cx="33" cy="84" r="17" fill="#9bcb76"/><circle cx="63" cy="72" r="20" fill="#8fc36a"/><circle cx="91" cy="91" r="18" fill="#9bcb76"/><circle cx="121" cy="74" r="16" fill="#88bc65"/>
+    <text x="74" y="32" fill="#668078" font-size="17" font-weight="700" text-anchor="middle">거북공원</text>
+    <path d="M74 39v31" stroke="#668078" stroke-width="2" stroke-dasharray="4 5"/>
+  </g>
+
+  <g transform="translate(383 76)">
+    <rect width="31" height="104" rx="14" fill="#fff" stroke="#c4d4da" stroke-width="2"/>
+    <text x="15.5" y="22" fill="#81959e" font-size="10" font-weight="700" text-anchor="middle" transform="rotate(90 15.5 22)">미래포스트</text>
+  </g>
+
+  <g transform="translate(410 685)">
+    <rect x="-154" y="-27" width="308" height="54" rx="27" fill="#fff" stroke="#d7e6ec" stroke-width="2"/>
+    <circle cx="-119" r="8" fill="#0099db"/>
+    <text x="-98" y="7" fill="#35505d" font-size="17" font-weight="700">치과</text>
+    <circle cx="-26" r="8" fill="#07567c"/>
+    <text x="-5" y="7" fill="#35505d" font-size="17" font-weight="700">주차장</text>
+    <path d="M72 0h38" stroke="#0099db" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 10"/>
+    <text x="125" y="7" fill="#35505d" font-size="17" font-weight="700">동선</text>
+  </g>
+</svg>
