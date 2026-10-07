@@ -45,16 +45,16 @@ em{font-style:normal;color:var(--blue)}
 .hero-treatment{animation:heroIn .85s .1s ease both}
 @keyframes heroIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 
-.hero{position:relative;min-height:846px;padding:104px 24px 0;overflow:hidden;background:#d9edf8 url('assets/images/hero-soft-blue-background.jpg') center top/cover no-repeat}
+.hero{position:relative;min-height:0;padding:104px 24px 0;overflow:hidden;background:#d9edf8 url('assets/images/hero-soft-blue-background.jpg') center top/cover no-repeat}
 .hero-glow{display:none}
 .hero-copy{position:relative;z-index:3}
 .hero-ci{display:none;position:absolute;z-index:1;right:-58px;top:190px;width:240px;height:auto;opacity:.75;filter:drop-shadow(0 0 22px rgba(73,205,255,.28));pointer-events:none}
 @media(max-width:480px){.hero-ci{width:36vw;right:-8vw;top:300px;opacity:.6}}
 .hero h1{color:#123b56;font-size:clamp(40px,11.8vw,54px);line-height:1.16;letter-spacing:-.075em;font-weight:800;text-shadow:0 2px 0 rgba(255,255,255,.75)}
 .hero h1 em{display:inline-block;margin-top:8px;color:#008fca}
-.hero-lead{margin-top:28px;font-size:clamp(17px,5.2vw,20px);line-height:1.6;font-weight:600;color:#496979;word-break:keep-all;text-shadow:0 1px 0 rgba(255,255,255,.7)}.hero-lead strong{color:#007eb6;font-weight:800}
+.hero-lead{margin-top:28px;font-size:clamp(15px,4.9vw,20px);line-height:1.6;letter-spacing:-.06em;font-weight:600;color:#496979;word-break:keep-all;text-shadow:0 1px 0 rgba(255,255,255,.7)}.hero-lead strong{color:#007eb6;font-weight:800}
 .hero-sub{margin-top:16px;color:rgba(255,255,255,.66);font-size:20px;line-height:1.55}
-.hero-treatment{position:absolute;z-index:2;left:0;right:0;bottom:0;height:380px;overflow:hidden;background:#d9e3e7}
+.hero-treatment{position:relative;z-index:2;margin:44px -24px 0;height:380px;overflow:hidden;background:#d9e3e7}
 .hero-treatment:before,.hero-treatment:after{content:"";position:absolute;z-index:2;left:0;right:0;pointer-events:none}
 .hero-treatment:before{top:0;height:92px;background:linear-gradient(to bottom,#d8ebf5 0%,rgba(216,235,245,.76) 35%,transparent 100%)}
 .hero-treatment:after{bottom:0;height:140px;background:linear-gradient(to top,#fff 0%,rgba(255,255,255,.7) 35%,transparent 100%)}
