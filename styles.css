@@ -45,6 +45,7 @@ em{font-style:normal;color:var(--blue)}
 .hero{position:relative;min-height:846px;padding:104px 24px 0;overflow:hidden;background:linear-gradient(160deg,#0a2f45 0%,#041c2c 70%,#06283d 100%)}
 .hero-glow{position:absolute;width:460px;height:460px;border-radius:50%;right:-230px;top:150px;background:radial-gradient(circle,rgba(0,153,219,.42),rgba(0,153,219,0) 66%)}
 .hero-copy{position:relative;z-index:3}
+.hero-ci{position:absolute;z-index:1;right:-58px;top:190px;width:240px;height:auto;opacity:.75;filter:drop-shadow(0 0 22px rgba(73,205,255,.28));pointer-events:none}
 .hero h1{font-size:clamp(40px,11.8vw,54px);line-height:1.16;letter-spacing:-.055em;font-weight:800}
 .hero h1 em{display:inline-block;margin-top:8px;color:#6fd7ff}
 .hero-lead{margin-top:28px;font-size:20px;line-height:1.55;font-weight:600;color:#fff}

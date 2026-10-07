@@ -554,8 +554,11 @@
   document.querySelectorAll('[data-implant-reveal]').forEach(widget => {
     const stage = widget.querySelector('.implant-stage');
     const hotspot = widget.querySelector('.implant-hotspot');
-    let touching = false;
+    const touchDevice = window.matchMedia('(hover: none)').matches;
     let hasRevealed = false;
+    // 탭으로 옮긴 돋보기는 사용자가 다시 스크롤할 때까지 그 자리에 둠
+    let pinnedAtScroll = null;
+    let scrollTicking = false;
 
     const setSpotlight = event => {
       const rect = stage.getBoundingClientRect();
@@ -575,26 +578,59 @@
       event.stopPropagation();
       const rect = stage.getBoundingClientRect();
       reveal({ clientX: rect.left + rect.width * .5, clientY: rect.top + rect.height * .58 });
+      pinnedAtScroll = window.scrollY;
     });
 
-    stage.addEventListener('pointerdown', event => {
-      touching = true;
+    if (!touchDevice) {
+      stage.addEventListener('pointermove', event => {
+        if (event.pointerType === 'mouse') reveal(event);
+      });
+      stage.addEventListener('pointerleave', event => {
+        if (event.pointerType === 'mouse' && !hasRevealed) stage.classList.remove('is-revealing');
+      });
+      return;
+    }
+
+    // 모바일: 드래그는 스크롤과 충돌하므로, 스크롤에 맞춰 돋보기가 치아 → 잇몸 → 뼈 순으로 내려가게 함
+    stage.addEventListener('click', event => {
       reveal(event);
-      if (stage.setPointerCapture) stage.setPointerCapture(event.pointerId);
+      pinnedAtScroll = window.scrollY;
     });
 
-    stage.addEventListener('pointermove', event => {
-      if (event.pointerType === 'mouse' || touching) reveal(event);
-    });
+    const followScroll = () => {
+      scrollTicking = false;
+      if (pinnedAtScroll !== null) {
+        if (Math.abs(window.scrollY - pinnedAtScroll) < 60) return;
+        pinnedAtScroll = null;
+      }
+      const rect = stage.getBoundingClientRect();
+      const vh = window.innerHeight;
+      // 사진 윗부분이 화면 70% 지점에 올 때 시작, 사진 아래가 화면 45% 지점에 올 때 끝
+      const start = vh * .7;
+      const end = vh * .45 - rect.height;
+      const progress = (start - rect.top) / (start - end);
+      if (progress < .08) {
+        if (!hasRevealed) return;
+        stage.classList.remove('is-revealing');
+        hasRevealed = false;
+        return;
+      }
+      const p = Math.min(1, progress);
+      const ease = p * p * (3 - 2 * p);
+      reveal({
+        clientX: rect.left + rect.width * (.47 + ease * .06),
+        clientY: rect.top + rect.height * (.4 + ease * .36)
+      });
+    };
 
-    stage.addEventListener('pointerup', event => {
-      touching = false;
-      if (stage.hasPointerCapture && stage.hasPointerCapture(event.pointerId)) stage.releasePointerCapture(event.pointerId);
-    });
-    stage.addEventListener('pointercancel', () => { touching = false; });
-    stage.addEventListener('pointerleave', event => {
-      if (event.pointerType === 'mouse' && !hasRevealed) stage.classList.remove('is-revealing');
-    });
+    const requestFollow = () => {
+      if (scrollTicking) return;
+      scrollTicking = true;
+      requestAnimationFrame(followScroll);
+    };
+    window.addEventListener('scroll', requestFollow, { passive: true });
+    window.addEventListener('resize', requestFollow);
+    followScroll();
   });
 
   const zoomViewer = document.querySelector('.zoom-viewer');
