@@ -88,6 +88,16 @@
       processSteps.forEach(step => processObserver.observe(step));
     }
   }
+  // 오시는 길 지도: 버튼 하나로 x1과 x2 이미지를 전환
+  const mapZoomButton = document.querySelector('[data-map-zoom]');
+  mapZoomButton?.addEventListener('click', () => {
+    const zoomed = mapZoomButton.getAttribute('aria-pressed') !== 'true';
+    mapZoomButton.setAttribute('aria-pressed', String(zoomed));
+    document.querySelectorAll('[data-map-view]').forEach(image => {
+      image.hidden = image.dataset.mapView !== (zoomed ? 'zoom' : 'base');
+    });
+  });
+
   const countObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
@@ -100,7 +110,7 @@
       const tick = now => {
         const t = Math.min(1, (now - start) / duration);
         const eased = 1 - Math.pow(1 - t, 3);
-        el.textContent = `${Math.round(target * eased)}${suffix}`;
+        el.textContent = `${Math.round(target * eased).toLocaleString('en-US')}${suffix}`;
         if (t < 1) requestAnimationFrame(tick);
       };
       requestAnimationFrame(tick);
